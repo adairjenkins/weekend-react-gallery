@@ -7,8 +7,8 @@ const galleryItems = [
     },
     {
         id: 2, 
-        path: 'images/hockney.jpg', 
-        description: 'David Hockney', 
+        path: 'images/whistler.jpg', 
+        description: 'Whistler', 
         likes: 0 
     },
     {
@@ -49,8 +49,8 @@ const galleryItems = [
     },
     {
         id: 9, 
-        path: 'images/whistler.jpg', 
-        description: 'Whistler', 
+        path: 'images/hockney.jpg', 
+        description: 'David Hockney', 
         likes: 0 
     }
 ];
