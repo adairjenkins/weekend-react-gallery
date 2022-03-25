@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
+import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList'
 import './App.css';
 
 function App() {
-    return (
+  //On load, get students
+  useEffect(() => {
+    getGalleryItems()
+  }, [])
+
+  const getGalleryItems = () => {
+    axios.get('/gallery')
+    .then(response => {
+        console.log('GET response:', response.data);
+        setStudentList(response.data);
+    })
+    .catch(err => {
+        console.log('error in GET')
+        console.log(err);
+    })
+}
+  
+  return (
       <div>
         <div className="App">
           <header className="App-header">
