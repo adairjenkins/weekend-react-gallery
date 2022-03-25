@@ -1,10 +1,15 @@
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList () {
+function GalleryList ({ galleryList }) {
     return (
         <>
-            <p>GalleryList goes her</p>
-            < GalleryItem />
+            {galleryList.map ( galleryItem =>
+
+                < GalleryItem
+                    key = {galleryItem.id}
+                    galleryItem = {galleryItem}
+                />
+            )}
         </>
     )
 }

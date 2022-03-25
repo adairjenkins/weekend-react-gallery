@@ -1,7 +1,7 @@
-function GalleryItem () {
+function GalleryItem ({ galleryItem }) {
     return (
         <>
-            <p>GalleryItem goes here</p>
+            <img src={galleryItem.path}/>
         </>
     )
 }

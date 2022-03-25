@@ -48,7 +48,7 @@ const galleryItems = [
         likes: 0 
     },
     {
-        id: 4, 
+        id: 9, 
         path: 'images/whistler.jpg', 
         description: 'Whistler', 
         likes: 0 

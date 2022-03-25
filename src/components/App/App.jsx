@@ -4,7 +4,10 @@ import GalleryList from '../GalleryList/GalleryList'
 import './App.css';
 
 function App() {
-  //On load, get students
+  
+  const [galleryList, setGalleryList] = useState([]);
+  
+  //On load, get Gallery
   useEffect(() => {
     getGalleryItems()
   }, [])
@@ -13,13 +16,18 @@ function App() {
     axios.get('/gallery')
     .then(response => {
         console.log('GET response:', response.data);
-        setStudentList(response.data);
+        setGalleryList(response.data);
     })
     .catch(err => {
         console.log('error in GET')
         console.log(err);
     })
-}
+  }
+
+  // update gallery item like count
+  const updateLikes = () => {
+
+  }
   
   return (
       <div>
@@ -27,13 +35,11 @@ function App() {
           <header className="App-header">
             <h1 className="App-title">Gallery of My Life</h1>
           </header>
-          <p>Gallery goes here</p>
-          <img src="images/goat_small.jpg"/>
-        </div>
-        <div>
-          < GalleryList/>
-        </div>
+          < GalleryList 
+            galleryList = {galleryList}
+          />
       </div>
+    </div>
     );
 }
 
