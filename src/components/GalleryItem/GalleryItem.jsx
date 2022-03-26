@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function GalleryItem ({ galleryItem }) {
+function GalleryItem ({ galleryItem, updateLikeCount }) {
     const [showImage, setShowImage] = useState(true);
 
     const handleImageClick = () => {
@@ -8,9 +8,21 @@ function GalleryItem ({ galleryItem }) {
         setShowImage(!showImage);
     }
 
+    const handleLike = () => {
+        console.log('clicked like');
+        console.log('liked id:',galleryItem.id);
+        updateLikeCount(galleryItem.id);
+    }
+
     return (
-        <div onClick={handleImageClick}>
-            {showImage && <img src={galleryItem.path} width="300"/>}
+        <div>    
+            <div className="item" onClick={handleImageClick}>
+                {showImage ? <img src={galleryItem.path} width="300"/> : 
+                            <div className="description">
+                                <p>{galleryItem.description}</p>
+                            </div>}
+            </div>
+            <span className="material-icons" onClick={handleLike}>favorite_border</span>
         </div>
     )
 }

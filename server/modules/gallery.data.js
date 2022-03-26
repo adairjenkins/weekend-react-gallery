@@ -32,7 +32,7 @@ const galleryItems = [
     {
         id: 6, 
         path: 'images/mondrian.jpg', 
-        description: 'Mondrian', 
+        description: 'Piet MondrianComposition C (No.III) with Red, Yellow and Blue', 
         likes: 0 
     },
     {

@@ -25,8 +25,17 @@ function App() {
   }
 
   // update gallery item like count
-  const updateLikes = () => {
-
+  const updateLikeCount = (id) => {
+    console.log('updateLikeCount func');
+    axios.put(`/gallery/${id}`)
+    .then( response => {
+      console.log('updated likes for id#', id);
+      console.log(response);
+      getGalleryItems();
+    })
+    .catch( error => {
+      console.log(error)
+    })
   }
   
   return (
@@ -37,6 +46,7 @@ function App() {
           </header>
           < GalleryList 
             galleryList = {galleryList}
+            updateLikeCount = {updateLikeCount}
           />
       </div>
     </div>

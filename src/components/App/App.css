@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  font-family: Poppins;
 }
 
 .App-header {
@@ -7,9 +7,30 @@
   padding: 1em;
   color: white;
   margin-bottom: 1em;
+  width: 100%;
 }
 
 .App-title {
   font-size: 1.5em;
+  text-align: left;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:space-evenly;
+  width: 960px;
+}
+
+.item {
+  margin: 5px;
+}
+
+.description {
+  height: 200px;
+  width: 300px;
+  outline: solid black 1px;
+  outline-offset: -2px;
 }
 
