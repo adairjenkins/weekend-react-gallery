@@ -22,7 +22,9 @@ function GalleryItem ({ galleryItem, updateLikeCount }) {
                                 <p>{galleryItem.description}</p>
                             </div>}
             </div>
-            <span className="material-icons" onClick={handleLike}>favorite_border</span>
+            <div><span className="material-icons" onClick={handleLike}>favorite_border</span>
+                <span>{galleryItem.likes}</span>
+            </div>
         </div>
     )
 }

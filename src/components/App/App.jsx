@@ -27,7 +27,7 @@ function App() {
   // update gallery item like count
   const updateLikeCount = (id) => {
     console.log('updateLikeCount func');
-    axios.put(`/gallery/${id}`)
+    axios.put(`/gallery/like/${id}`)
     .then( response => {
       console.log('updated likes for id#', id);
       console.log(response);
