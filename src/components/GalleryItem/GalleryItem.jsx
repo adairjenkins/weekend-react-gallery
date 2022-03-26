@@ -17,7 +17,7 @@ function GalleryItem ({ galleryItem, updateLikeCount }) {
     return (
         <div>    
             <div className="item" onClick={handleImageClick}>
-                {showImage ? <img src={galleryItem.path} width="300"/> : 
+                {showImage ? <img className="image" src={galleryItem.path} width="300" height="200"/> : 
                             <div className="description">
                                 <p>{galleryItem.description}</p>
                             </div>}

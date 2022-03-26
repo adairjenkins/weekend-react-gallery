@@ -24,13 +24,15 @@
 }
 
 .item {
-  margin: 5px;
+  display: flex;
+}
+
+.image {
 }
 
 .description {
-  height: 200px;
-  width: 300px;
-  outline: solid black 1px;
-  outline-offset: -2px;
+  height: 198px;
+  width: 298px;
+  border: 1px solid black;
 }
 
