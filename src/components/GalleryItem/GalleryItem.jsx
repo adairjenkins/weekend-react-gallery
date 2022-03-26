@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ImageCaption from '../ImageCaption/ImageCaption';
 
 function GalleryItem ({ galleryItem, updateLikeCount }) {
     const [showImage, setShowImage] = useState(true);
@@ -18,8 +19,9 @@ function GalleryItem ({ galleryItem, updateLikeCount }) {
         <div>    
             <div className="item" onClick={handleImageClick}>
                 {showImage ? <img className="image" src={galleryItem.path} width="300" height="200"/> : 
-                            <div className="description">
-                                <p>{galleryItem.description}</p>
+                            <div className="caption">
+                                < ImageCaption
+                                  galleryItem = {galleryItem}/>
                             </div>}
             </div>
             <div><span className="material-icons" onClick={handleLike}>favorite_border</span>
