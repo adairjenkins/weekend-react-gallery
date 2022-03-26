@@ -2,55 +2,73 @@ const galleryItems = [
     {
         id: 1, 
         path: 'images/kandinsky.jpg', 
-        description: 'Vasily Kandinsky, Several Circles', 
+        artist: 'Vasily Kandinsky',
+        title: 'Several Circles',
+        date: 1926,
         likes: 0 
     },
     {
         id: 2, 
         path: 'images/whistler.jpg', 
-        description: 'Whistler', 
+        artist: 'James Abbott McNeill Whistler',
+        title: 'Nocturne: Blue and Silver - Chelsea',
+        date: 1871,
         likes: 0 
     },
     {
         id: 3, 
         path: 'images/klimt.jpg', 
-        description: 'David Hockney', 
+        artist: 'Gustav Klimt', 
+        title: 'Beech Forest I',
+        date: 1903,
         likes: 0 
     },
     {
         id: 4, 
         path: 'images/marc.jpg', 
-        description: 'Franz Marc, Large Blue Horses', 
+        artist: 'Franz Marc', 
+        title: "Large Blue Horses",
+        year: 1911,
         likes: 0 
     },
     {
         id: 5, 
         path: 'images/matisse.jpg', 
-        description: 'Matisse', 
+        artist: 'Henri Matisse', 
+        title: 'La Gerbe',
+        date: 1953,
         likes: 0 
     },
     {
         id: 6, 
         path: 'images/mondrian.jpg', 
-        description: 'Piet MondrianComposition C (No.III) with Red, Yellow and Blue', 
+        artist: 'Piet Mondrian', 
+        title: 'Composition C (No.III) with Red, Yellow and Blue',
+        date: 1935,
         likes: 0 
     },
     {
         id: 7, 
         path: 'images/okeeffe.jpg', 
-        description: `Georgia O'Keeffe`, 
+        artist: `Georgia O'Keeffe`, 
+        title: 'Evening Star No. II',
+        date: 1917,
         likes: 0 
     },
     {
         id: 8, 
         path: 'images/turner.jpg', 
-        description: 'Turner', 
+        artist: 'J.M.W. Turner', 
+        title: `Snow Storm - Steam-Boat off a Harbour's Mouth`,
+        date: 1842,
         likes: 0 
     },
     {
         id: 9, 
         path: 'images/hockney.jpg', 
-        description: 'David Hockney', 
+        artist: 'David Hockney', 
+        title: 'Autumn Pool',
+        date: 1978,
         likes: 0 
     }
 ];
