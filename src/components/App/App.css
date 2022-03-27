@@ -67,3 +67,7 @@
   display: flex;
   cursor: default;
 }
+
+.likes {
+  margin-left: .4em;
+}
