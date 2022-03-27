@@ -65,4 +65,5 @@
 
 .likes-container {
   display: flex;
+  cursor: default;
 }
