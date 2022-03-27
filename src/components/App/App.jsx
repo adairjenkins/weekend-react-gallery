@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
-import GalleryList from '../GalleryList/GalleryList'
+import GalleryForm from '../GalleryForm/GalleryForm';
+import GalleryList from '../GalleryList/GalleryList';
 import './App.css';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
   
   //On load, get Gallery
   useEffect(() => {
-    getGalleryItems()
+    getGalleryItems();
   }, [])
 
   const getGalleryItems = () => {
@@ -42,8 +43,11 @@ function App() {
       <div>
         <div className="App">
           <header className="App-header">
-            <h1 className="App-title">Gallery of My Life</h1>
+            <h1 className="App-title">Gallery</h1>
           </header>
+          < GalleryForm
+            getGalleryItems={getGalleryItems}
+          />
           < GalleryList 
             galleryList = {galleryList}
             updateLikeCount = {updateLikeCount}
