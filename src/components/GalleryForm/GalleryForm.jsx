@@ -40,7 +40,7 @@ function GalleryForm({getGalleryItems}) {
             <label>Year:</label>
                 <input onChange={evt => setDate(evt.target.value)} value={date}/>
             <label>URL:</label>
-                <input onChange={evt => setUrl(evt.target.value)} value={path}/>
+                <input onChange={evt => setPath(evt.target.value)} value={path}/>
             <button type="submit">Add</button>
         </form>
     )
