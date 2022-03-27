@@ -27,8 +27,8 @@ const galleryItems = [
         id: 4, 
         path: 'images/marc.jpg', 
         artist: 'Franz Marc', 
-        title: "Large Blue Horses",
-        year: 1911,
+        title: 'Large Blue Horses',
+        date: 1911,
         likes: 0 
     },
     {

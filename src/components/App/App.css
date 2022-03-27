@@ -25,14 +25,44 @@
 
 .item {
   display: flex;
+  margin-bottom: 5px;
 }
 
-.image {
+.captionBox {
+  height: 198px;
+  width: 298px;
+  border: 1px solid rgb(194, 194, 194);
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.artist {
+  font-size:.7em;
+}
+
+.title {
+  font-size: .8em;
+  font-style: italic;
+}
+
+.date {
+  font-size: .6em;
+}
+
+.artist, .title, .date {
+  text-align: center;
+  margin: 0;
 }
 
 .caption {
-  height: 198px;
-  width: 298px;
-  border: 1px solid black;
+  margin-bottom: 1em;
 }
 
+.item-and-likes {
+  margin-bottom: 1.4em;
+}
+
+.likes-container {
+  display: flex;
+}

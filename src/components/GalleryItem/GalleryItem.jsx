@@ -16,16 +16,16 @@ function GalleryItem ({ galleryItem, updateLikeCount }) {
     }
 
     return (
-        <div>    
+        <div className="item-and-likes">    
             <div className="item" onClick={handleImageClick}>
                 {showImage ? <img className="image" src={galleryItem.path} width="300" height="200"/> : 
-                            <div className="caption">
+                            <div className="captionBox">
                                 < ImageCaption
                                   galleryItem = {galleryItem}/>
                             </div>}
             </div>
-            <div><span className="material-icons" onClick={handleLike}>favorite_border</span>
-                <span>{galleryItem.likes}</span>
+            <div className="likes-container"><span className="material-icons" onClick={handleLike}>favorite_border</span>
+                 <span className="likes">{ galleryItem.likes > 0 && galleryItem.likes }</span>
             </div>
         </div>
     )

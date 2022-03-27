@@ -1,10 +1,10 @@
 function ImageCaption({galleryItem}) {
     return (
-        <>
-            <h5>{galleryItem.artist}</h5>
-            <h4>{galleryItem.title}</h4>
-            <h6>{galleryItem.date}</h6>
-        </>
+        <div className="caption">
+            <p className="artist">{galleryItem.artist}</p>
+            <p className="title">{galleryItem.title}</p>
+            <p className="date">{galleryItem.date}</p>
+        </div>
     )
 }
 
