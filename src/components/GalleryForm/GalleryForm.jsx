@@ -8,6 +8,7 @@ function GalleryForm({getGalleryItems}) {
     const [date, setDate] = useState('');
     const [path, setPath] = useState('');    
 
+    // POST request
     const addGalleryItem = (evt) => {
         console.log('addGalleryItem func');
         evt.preventDefault();
@@ -17,16 +18,14 @@ function GalleryForm({getGalleryItems}) {
             title: title, 
             date: date,
             path: path
-        })
-        .then( response => {
+        }).then( response => {
             getGalleryItems();
             // clear input
             setArtist('');
             setTitle('');
             setDate('');
             setPath('');
-        })
-        .catch( err => {
+        }).catch( err => {
             console.log(err);
         })
     }
