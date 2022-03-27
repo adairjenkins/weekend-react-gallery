@@ -38,6 +38,18 @@ function App() {
       console.log(error)
     })
   }
+
+  // delete item
+  const deleteItem = (id) => {
+    console.log('deleteItem func');
+    axios.delete(`/gallery/${id}`)
+    .then( response => {
+      console.log('item deleted');
+      getGalleryItems();
+    }).catch(function(err) {
+      console.log(err);
+    })
+  }
   
   return (
       <div>
@@ -51,6 +63,7 @@ function App() {
           < GalleryList 
             galleryList = {galleryList}
             updateLikeCount = {updateLikeCount}
+            deleteItem = {deleteItem}
           />
       </div>
     </div>

@@ -1,6 +1,6 @@
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList ({ galleryList, updateLikeCount }) {
+function GalleryList ({ galleryList, updateLikeCount, deleteItem }) {
     return (
         <div className="gallery">
             {galleryList.map ( galleryItem =>
@@ -9,6 +9,7 @@ function GalleryList ({ galleryList, updateLikeCount }) {
                     key = {galleryItem.id}
                     galleryItem = {galleryItem}
                     updateLikeCount = {updateLikeCount}
+                    deleteItem = {deleteItem}
                 />
             )}
         </div>
