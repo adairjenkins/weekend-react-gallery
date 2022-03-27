@@ -66,4 +66,24 @@ router.get('/', (req, res) => {
     })
 }); // END GET Route
 
+// DELETE Route
+router.delete('/:id', (req, res) => {
+    const id = req.params.id;
+    console.log('DELETE id:', id);
+
+    const queryText = `
+    DELETE FROM "items"
+    WHERE "id" = $1;
+    `;
+    const values = [id];
+
+    pool.query(queryText, values)
+    .then(result => {
+        res.sendStatus(204);
+    }).catch(err => {
+        console.log(err);
+        res.sendStatus(500);
+    })
+})
+
 module.exports = router;

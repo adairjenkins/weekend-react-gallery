@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ImageCaption from '../ImageCaption/ImageCaption';
 
-function GalleryItem ({ galleryItem, updateLikeCount }) {
+function GalleryItem ({ galleryItem, updateLikeCount, deleteItem }) {
     const [showImage, setShowImage] = useState(true);
 
     const handleImageClick = () => {
@@ -15,6 +15,11 @@ function GalleryItem ({ galleryItem, updateLikeCount }) {
         updateLikeCount(galleryItem.id);
     }
 
+    const handleDelete = () => {
+        console.log('clicked delete:', galleryItem.title); 
+        deleteItem(galleryItem.id);
+    }
+
     return (
         <div className="item-and-likes">    
             <div className="item" onClick={handleImageClick}>
@@ -26,6 +31,7 @@ function GalleryItem ({ galleryItem, updateLikeCount }) {
             </div>
             <div className="likes-container"><span className="material-icons" onClick={handleLike}>favorite_border</span>
                  <span className="likes">{ galleryItem.likes > 0 && galleryItem.likes }</span>
+                 <span className="deleteBtn material-icons" onClick={handleDelete}>clear</span>
             </div>
         </div>
     )
